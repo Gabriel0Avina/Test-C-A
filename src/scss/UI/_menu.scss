@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.menu-oculto{
+    @include m.telefono{
+        visibility: visible;
+    }
+    visibility: hidden;
+    margin-top: 3rem;
+    i{
+        font-size: 3rem;
+    }
+    display: flex;
+    justify-content: space-around;
+    .group{
+        display: flex;
+        gap: 1rem;
+    }
+}
+h2{
+    @include m.telefono{
+        visibility: visible;
+    }
+    margin-top: 2rem;
+    visibility: hidden;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+    
+
+}

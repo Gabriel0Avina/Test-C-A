@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    @include m.telefono{
+        flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+       margin-left: 0;
+    }
+   margin-left: 5rem;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    &__imagen{
+       
+        img{
+            
+            height: 10rem;
+        }
+    }
+    &__contenido{
+        @include m.telefono{
+            margin-top: 2rem;
+            gap: 2rem;
+            justify-content: space-evenly;
+        }
+        display: flex;
+        gap:3rem;
+        a{
+           transition: .3s all ease;
+            color: v.$negro;
+            &:hover{
+                color: v.$azul;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
